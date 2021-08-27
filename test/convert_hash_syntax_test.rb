@@ -1,3 +1,5 @@
+# 再復習
+
 require 'minitest/autorun'
 require './lib/convert_hash_syntax'
 
@@ -5,7 +7,7 @@ class ConvertHashSyntaxTest < Minitest::Test
   def test_convert_hash_syntax
     old_syntax = <<~TEXT
       {
-        :name => 'Alice',
+        :name=>'Alice',
         :age=>20,
         :gender => :female
       }
