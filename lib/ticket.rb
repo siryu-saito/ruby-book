@@ -1,3 +1,5 @@
+# 再復習
+
 class Ticket
   attr_reader :fare, :stamped_at
 

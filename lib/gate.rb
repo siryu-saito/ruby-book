@@ -1,3 +1,5 @@
+# 再復習
+
 class Gate
   STATIONS = [:umeda, :juso, :mikuni]
   FARES = [150, 190]
@@ -11,7 +13,8 @@ class Gate
   end
 
   def exit(ticket)
-    true
+    fare = calc_fare(ticket)
+    fare <= ticket.fare
   end
 
   def calc_fare(ticket)
@@ -19,10 +22,5 @@ class Gate
     to = STATIONS.index(@name)
     distance = to - from
     FARES[distance - 1]
-  end
-
-  def exit(ticket)
-    fare = calc_fare(ticket)
-    fare <= ticket.fare
   end
 end
